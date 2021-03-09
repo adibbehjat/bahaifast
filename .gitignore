@@ -1,0 +1,12 @@
+.DS_Store
+.env
+.flaskenv
+*.pyc
+*.pyo
+bahaifast/
+env*
+*.egg
+*.egg-info/
+.cache/
+.pytest_cache/
+.vscode

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% block head %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        {{ bootstrap.load_css() }}
+
+        {% block styles %}            
+        {% endblock %}
+
+        <title>Baha'i Fast Online Calendar</title>
+        {% endblock %}
+    </head>
+    <body class="text-center">
+        {% block content %}{% endblock %}
+
+        <!-- Bootstrap JavaScript -->
+        {{ bootstrap.load_js() }}
+        {% block scripts %}{% endblock %}
+    </body>
+    
+</html>

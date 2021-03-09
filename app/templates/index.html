@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<link href="{{ url_for('static',filename='styles/base.css') }}" rel="stylesheet">
+<!-- Sunrise animation credit: https://codepen.io/TheBrutalTooth/pen/KWwgQo -->
+{% endblock %}
+
+{% block content %}
+<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+      <div class="inner">
+        <h3 class="masthead-brand">Happy Fasting!</h3>
+      </div>
+    </header>
+
+    <main role="main" class="inner cover">
+        <h1 class="cover-heading">Fasting Schedule for Today</h1>
+        <div class="row mt-5">
+            <div class="col timebox">
+                <div class="anim">
+                    <div class="sunrise mr-auto ml-auto"></div>
+                    <div class="landscape-rise"></div>
+                </div>
+                <div class="lead dawn_time">6:26</div>
+            </div>
+            <div class="col-auto">
+            </div>
+            <div class="col timebox">
+                <div class="anim">
+                    <div class="sunset mr-auto ml-auto"></div>
+                    <div class="landscape-set"></div>
+                </div>
+                <div class="lead dusk_time">6:08</div>
+            </div>
+        </div>
+
+
+        <div class="input-group mt-5">
+            <div class="input-group-prepend">
+                <button id="geolocation-button" class="btn btn-outline-secondary" type="button">Search</button>
+            </div>
+            <input id="city-selector" type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+        </div>
+    </main>
+
+    <footer class="mastfoot mt-auto">
+      <div class="inner">
+        <p>Made by <a href="https://twitter.com/abehjat">@abehjat</a>.</p>
+      </div>
+    </footer>
+  </div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="{{ url_for('static',filename='js/geo_loc.js') }}"></script>
+{% endblock %}
